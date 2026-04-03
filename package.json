@@ -1,0 +1,49 @@
+{
+  "name": "@alexgorbatchev/dedent-string",
+  "version": "0.1.0",
+  "description": "Dedent strings and interpolate multiline template placeholders while preserving indentation.",
+  "license": "MIT",
+  "homepage": "https://github.com/alexgorbatchev/dedent-string#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgorbatchev/dedent-string.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexgorbatchev/dedent-string/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dedentString": {
+      "types": "./dist/dedentString.d.ts",
+      "import": "./dist/dedentString.js"
+    },
+    "./dedentTemplate": {
+      "types": "./dist/dedentTemplate.d.ts",
+      "import": "./dist/dedentTemplate.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "bun build ./index.ts ./dedentString.ts ./dedentTemplate.ts --target=node --format=esm --outdir ./dist --entry-naming [name].js --sourcemap && tsc -p tsconfig.build.json",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build && bun run test && bun run typecheck"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.8.3"
+  }
+}
