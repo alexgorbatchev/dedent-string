@@ -66,6 +66,10 @@ Dedents the template first, then replaces placeholders in two modes:
 
 ```bash
 bun install
-bun test
 bun run build
+bun test
+bun run typecheck
+npm pack --dry-run
 ```
+
+See `RELEASING.md` for the tag-based npm release workflow and GitHub release notes process.

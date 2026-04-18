@@ -45,5 +45,14 @@ jobs:
       - name: Build package
         run: bun run build
 
+      - name: Run tests
+        run: bun test
+
+      - name: Typecheck package
+        run: bun run typecheck
+
+      - name: Verify npm package contents
+        run: npm pack --dry-run
+
       - name: Publish package
         run: npm publish --provenance --access public

@@ -41,10 +41,12 @@
     "test": "bun test",
     "typecheck": "tsc --noEmit",
     "verify:dist": "bun ./verifyDistExports.ts",
+    "prepare": "husky",
     "prepublishOnly": "bun run build && bun run test && bun run typecheck"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "husky": "^9.1.7",
     "typescript": "^5.8.3"
   }
 }
