@@ -1,6 +1,6 @@
 {
   "name": "@alexgorbatchev/dedent-string",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dedent strings and interpolate multiline template placeholders while preserving indentation.",
   "license": "MIT",
   "homepage": "https://github.com/alexgorbatchev/dedent-string#readme",
