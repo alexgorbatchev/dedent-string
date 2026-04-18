@@ -47,3 +47,5 @@ export function dedentString(str: string): string {
     .join("\n")
     .trim();
 }
+
+export default dedentString;

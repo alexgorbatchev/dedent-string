@@ -37,9 +37,10 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "bun build ./index.ts ./dedentString.ts ./dedentTemplate.ts --target=node --format=esm --outdir ./dist --entry-naming [name].js --sourcemap && tsc -p tsconfig.build.json",
+    "build": "bun build ./index.ts ./dedentString.ts ./dedentTemplate.ts --target=node --format=esm --outdir ./dist --entry-naming [name].js --sourcemap && tsc -p tsconfig.build.json && bun run verify:dist",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
+    "verify:dist": "bun ./verifyDistExports.ts",
     "prepublishOnly": "bun run build && bun run test && bun run typecheck"
   },
   "devDependencies": {

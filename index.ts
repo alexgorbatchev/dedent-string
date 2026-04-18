@@ -1,2 +1,5 @@
-export { dedentString } from "./dedentString";
-export { dedentTemplate } from "./dedentTemplate";
+import dedentString from "./dedentString";
+import { dedentTemplate } from "./dedentTemplate";
+
+export default dedentString;
+export { dedentString, dedentTemplate };
