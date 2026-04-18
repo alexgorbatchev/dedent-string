@@ -14,7 +14,7 @@ npm install @alexgorbatchev/dedent-string
 ## Usage
 
 ```ts
-import { dedentString, dedentTemplate } from "@alexgorbatchev/dedent-string";
+import dedentString, { dedentTemplate } from "@alexgorbatchev/dedent-string";
 
 const text = dedentString(`
     function hello() {
@@ -52,6 +52,8 @@ console.log(rendered);
 ### `dedentString(str: string): string`
 
 Removes the smallest shared leading indentation from all non-empty lines, then trims leading and trailing blank lines.
+
+This function is available as both the package default export and a named export.
 
 ### `dedentTemplate(template: string, values: Record<string, string>): string`
 
